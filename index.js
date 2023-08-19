@@ -1,3 +1,19 @@
+//Clock
+setInterval(() => {
+    d = new Date();
+    htime = d.getHours();
+    mtime = d.getMinutes();
+    stime = d.getSeconds();
+    hrotation = 30*htime + mtime/2;
+    mrotation = 6*mtime;
+    srotation = 6*stime;
+
+    hour.style.transform = `rotate(${hrotation}deg)`;
+    minute.style.transform = `rotate(${mrotation}deg)`;
+    second.style.transform = `rotate(${srotation}deg)`;
+}, 1000);
+
+
 const Input = document.getElementById('taskInput');
 const Button = document.getElementById('addButton');
 const List = document.getElementById('taskList');
@@ -6,7 +22,7 @@ Button.addEventListener("click",Add);
 Button.addEventListener("keypress",(e)=>{
     if(e.key == "Enter"){
         console.log("Enter key is pressed")
-        document.getElementById("addButton").click();
+        Button.click();
     }
 });
 function Add(){
@@ -15,20 +31,13 @@ function Add(){
         const Item = document.createElement('li');
         Item.innerHTML = `
             <span>${taskText}</span>
-            <button class="completeButton">Complete</button>
             <button class="btn btn-danger">Delete</button>
         `;
         List.appendChild(Item);
         Input.value = '';
-        Item.querySelector('.completeButton').addEventListener('click', completeTask);
         Item.querySelector('.btn-danger ').addEventListener('click', deleteTask);
     }
 }
-    function completeTask(event) {
-        const taskItem = event.target.parentNode;
-        taskItem.classList.toggle('completed');
-    }
-    
     function deleteTask(event) {
         const taskItem = event.target.parentNode;
         List.removeChild(taskItem);

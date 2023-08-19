@@ -5,7 +5,47 @@ body {
     background-image: url(./Images/freddie-marriage-vSchPA-YA_A-unsplash.jpg);
     background-size:cover;
   }
-  .card text-center{
-    margin-left: 30%;
-    margin-right: 30%;
+  .card {
+    background-image: url(./Images/avinash-kumar-Yr146Eua_mM-unsplash.jpg);
+    background-size:cover;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+  }
+  #clockContainer{  
+    position: relative;
+    margin-left: 39%;
+    height: 20vw;
+    width: 20vw; 
+    background: url(./Images/clock.png) no-repeat;
+    background-size: 100%;
+  }
+  
+  #hour, #minute, #second{
+    position: absolute;
+    background: black;
+    border-radius: 10px; 
+    transform-origin: bottom;
+  }
+  #hour{
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    opacity: 0.8;  
+  }
+  #minute{
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 48.9%;
+    opacity: 0.8;  
+  }
+  #second{
+    width: 1%;
+    height: 40%;
+    top: 9%;
+    left: 49.25%;
+    opacity: 0.8; 
+    
   }
