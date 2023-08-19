@@ -1,9 +1,13 @@
 body {
     font-family: "Sofia", sans-serif;
-    font-size:xx-large ;
+    font-size:large ;
     text-align:right ;
     background-image: url(./Images/freddie-marriage-vSchPA-YA_A-unsplash.jpg);
     background-size:cover;
+  }
+  .form-select{
+    font-family: "Sofia", sans-serif;
+    font-size:large ;
   }
   .card {
     background-image: url(./Images/avinash-kumar-Yr146Eua_mM-unsplash.jpg);
@@ -15,6 +19,7 @@ body {
   #clockContainer{  
     position: relative;
     margin-left: 39%;
+    margin-bottom: 3%;
     height: 20vw;
     width: 20vw; 
     background: url(./Images/clock.png) no-repeat;
@@ -50,5 +55,16 @@ body {
     
   }
   .card-header {
-    padding-bottom: 20px; /* Adjust the value as needed */
+    padding-bottom: 20px;
+}
+.low-priority {
+    background-color: #f1c40f;
+}
+
+.medium-priority {
+    background-color: #3498db; 
+}
+
+.high-priority {
+    background-color: #e74c3c; 
 }

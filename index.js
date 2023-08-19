@@ -19,14 +19,11 @@ const Button = document.getElementById('addButton');
 const List = document.getElementById('taskList');
 
 Button.addEventListener("click",Add);
-Button.addEventListener("keypress",(e)=>{
-    if(e.key === "Enter"){
-        console.log("Enter key is pressed");
-        Button.click();
-    }
-});
 function Add(){
     const taskText = Input.value.trim();
+    const prioritySelect = document.getElementById('prioritySelect');
+    const selectedPriority = prioritySelect.value;
+
     if(taskText != 0){
         const Item = document.createElement('li');
         Item.innerHTML = `
@@ -35,6 +32,7 @@ function Add(){
         `;
         List.appendChild(Item);
         Input.value = '';
+        Item.classList.add(`${selectedPriority}-priority`);
         Item.querySelector('.btn-danger ').addEventListener('click', deleteTask);
     }
 }
