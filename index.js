@@ -20,8 +20,8 @@ const List = document.getElementById('taskList');
 
 Button.addEventListener("click",Add);
 Button.addEventListener("keypress",(e)=>{
-    if(e.key == "Enter"){
-        console.log("Enter key is pressed")
+    if(e.key === "Enter"){
+        console.log("Enter key is pressed");
         Button.click();
     }
 });
