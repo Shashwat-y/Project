@@ -3,6 +3,12 @@ const Button = document.getElementById('addButton');
 const List = document.getElementById('taskList');
 
 Button.addEventListener("click",Add);
+Button.addEventListener("keypress",(e)=>{
+    if(e.key == "Enter"){
+        console.log("Enter key is pressed")
+        document.getElementById("addButton").click();
+    }
+});
 function Add(){
     const taskText = Input.value.trim();
     if(taskText != 0){
@@ -10,12 +16,12 @@ function Add(){
         Item.innerHTML = `
             <span>${taskText}</span>
             <button class="completeButton">Complete</button>
-            <button class="deleteButton">Delete</button>
+            <button class="btn btn-danger">Delete</button>
         `;
         List.appendChild(Item);
         Input.value = '';
         Item.querySelector('.completeButton').addEventListener('click', completeTask);
-        Item.querySelector('.deleteButton').addEventListener('click', deleteTask);
+        Item.querySelector('.btn-danger ').addEventListener('click', deleteTask);
     }
 }
     function completeTask(event) {

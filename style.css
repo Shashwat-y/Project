@@ -1,0 +1,11 @@
+body {
+    font-family: "Sofia", sans-serif;
+    font-size:xx-large ;
+    text-align:right ;
+    background-image: url(./Images/freddie-marriage-vSchPA-YA_A-unsplash.jpg);
+    background-size:cover;
+  }
+  .card text-center{
+    margin-left: 30%;
+    margin-right: 30%;
+  }
